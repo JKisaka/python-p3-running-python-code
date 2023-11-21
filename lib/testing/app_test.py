@@ -4,6 +4,14 @@ from os import path
 import runpy
 import io
 import sys
+from app import get_hello_world
+
+def test_hello_world():
+    result = get_hello_world()
+    expected = 'Hello world!Hello Sun!!Hello Sky!!!\n'
+    assert result == expected, f"AssertionError: expected {expected}, but got {result}"
+
+
 
 class TestAppPy:
     '''
